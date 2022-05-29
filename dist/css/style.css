@@ -5,13 +5,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 body {
   position: relative;
   height: 100vh;
-  width: 100vw;
-  background: url(../../assets/bg.gif) no-repeat center center fixed;
-  background-size: cover;
+  /* width: 100vw; */
+  background: url(../../assets/bg.gif), black;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100vw 100vh;
 }
 a {
   text-decoration: none;
@@ -20,12 +23,15 @@ a {
 #particles,
 #particles2 {
   /* background: #0d0816; */
-  background: transparent;
+  background: rgba(0, 0, 0, 0.438);
   overflow: hidden;
 
   position: fixed;
-  inset: 0 0 0 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
 }
+
 /* --------------------------------- */
 .logo {
   transform: scale(0.8);
@@ -44,4 +50,34 @@ a {
   font-size: 1.5rem;
   width: 70%;
   margin-block: 1rem;
+}
+.page_title {
+  font-size: 5rem;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+  line-height: 100%;
+
+  height: 100vh;
+  background: linear-gradient(to bottom, #3d3d3d40, #3b3b3b20);
+  overflow: hidden;
+}
+#sidebar_particle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.about_paragraph {
+  line-height: 150%;
+  font-size: 1.25rem;
+}
+.about_paragraph span {
+  font-size: 4rem;
+}
+.about_description .logo {
+  height: 150px;
+  margin-bottom: 1rem;
 }
